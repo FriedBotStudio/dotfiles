@@ -85,4 +85,8 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(pyenv init -)"
 eval "$(ssh-agent -s >> /dev/null)"
-eval "$(ssh-add --apple-use-keychain ~/.ssh/github-identity)"
+eval "$(ssh-add --apple-use-keychain ~/.ssh/github-identity)"# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/apple/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
